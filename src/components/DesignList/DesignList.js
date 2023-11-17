@@ -34,32 +34,44 @@ const DesignList = () => {
         {title:"Flyer - Organizacion - variante", url: "/images/designs/gye/Organizacion2.jpg" }
     ];
 
+    const designItems = [
+        {
+            thumbUrl: "/images/designs/design-maggie-small.jpg",
+            gallery: galleryMaggie,
+            galleryName: "Maggie Asian Shop",
+            title: "Maggie Asian Shop",
+            description: "Diseño de marca, portada y productos para una tienda de productos asiáticos."
+        },{
+            thumbUrl: "/images/designs/design-terra-small.jpg",
+            gallery: galleryTerra,
+            galleryName: "Terra, comida vegetariana y vegana",
+            title: "Terra",
+            description: "Diseño de marca, banner y menúes para un local de venta de comidas vegetarianas y veganas."
+        },{
+            thumbUrl: "/images/designs/design-gye-small.jpg",
+            gallery: galleryGyE,
+            galleryName: "Gente y Empresas",
+            title: "Gente y Empresas",
+            description: "Diseño de flyers, para una red de consultores expertos en gestión de capital humano."
+        }
+    ];
+
     return (<>
-        <Row className="no-margin min-site-size">
-            <Col xs="12" sm="6" md="4" lg="3" className="no-padding">
-                <DesignItem
-                    thumbUrl="/images/designs/design-maggie-small.jpg"
-                    gallery={galleryMaggie}
-                    galleryName="Maggie Asian Shop"
-                    title="Maggie Asian Shop"
-                    description="Diseño de marca, portada y productos para una tienda de productos asiáticos."></DesignItem>
-            </Col>
-            <Col xs="12" sm="6" md="4" lg="3" className="no-padding">
-                <DesignItem
-                    thumbUrl="/images/designs/design-terra-small.jpg"
-                    gallery={galleryTerra}
-                    galleryName="Terra, comida vegetariana y vegana"
-                    title="Terra"
-                    description="Diseño de marca, banner y menúes para un local de venta de comidas vegetarianas y veganas."></DesignItem>
-            </Col>
-            <Col xs="12" sm="6" md="4" lg="3" className="no-padding">
-                <DesignItem
-                    thumbUrl="/images/designs/design-gye-small.jpg"
-                    gallery={galleryGyE}
-                    galleryName="Gente y Empresas"
-                    title="Gente y Empresas"
-                    description="Diseño de flyers, para una red de consultores expertos en gestión de capital humano."></DesignItem>
-            </Col>
+        <Row className="no-margin designs-list-container">
+            {
+                designItems.map((designItem, index) => {
+                    return(
+                        <Col xs="12" sm="6" md="4" lg="3" className="" key={"projectdesign" + index}>
+                            <DesignItem
+                                thumbUrl={designItem.thumbUrl}
+                                gallery={designItem.gallery}
+                                galleryName={designItem.galleryName}
+                                title={designItem.title}
+                                description={designItem.description}></DesignItem>
+                        </Col>
+                    );
+                })
+            }
         </Row>
     </>)
 }

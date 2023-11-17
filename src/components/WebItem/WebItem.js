@@ -17,7 +17,7 @@ const WebItem = (props) => {
                     </div>
                 </div>
                 <div className="webs-item-navbar">
-                    <a href={props.targetUrl} target="_blank" rel="noreferrer" className="btn btn-dark btn-sm webs-item-nav">Ver sitio</a>
+                    <a href={props.targetUrl} target="_blank" rel="noreferrer" className="webs-item-button-goto">Ver sitio</a>
                 </div>
             </div>
         </div>

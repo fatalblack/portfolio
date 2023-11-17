@@ -2,8 +2,10 @@ import { useState, useEffect } from "react";
 import { Gallery } from "react-grid-gallery";
 import Lightbox from "yet-another-react-lightbox";
 import Captions from "yet-another-react-lightbox/plugins/captions";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
 import { getImageSize } from 'react-image-size';
 import { Button } from 'react-bootstrap'
 
@@ -28,10 +30,7 @@ const DesignGallery = (props) => {
                     </div>
                 )
             };
-
-            /*if(indexImages % 2 === 1){
-                setImages(current => [...current, newImage]);
-            }*/
+            
             setImages(current => [...current, newImage]);
 
             indexImages++;
@@ -48,7 +47,7 @@ const DesignGallery = (props) => {
     }
 
     return (
-        <div className="body-background designs-gallery">
+        <div className="designs-gallery designs-gallery-background">
             <div className="desings-gallery-title">
                 {props.galleryName}
                 <Button variant="link" className="navbar-brand desings-gallery-back" onClick={props.callback}>Volver</Button>
@@ -59,7 +58,7 @@ const DesignGallery = (props) => {
                 open={index >= 0}
                 index={index}
                 close={() => setIndex(-1)}
-                plugins={[Captions]}
+                plugins={[Captions,Thumbnails]}
             />
         </div>
     )
