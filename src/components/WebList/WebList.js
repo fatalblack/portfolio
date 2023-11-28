@@ -4,6 +4,12 @@ import WebItem from '../WebItem/WebItem'
 const WebList = () => {
     const webItems = [
         {
+            thumbUrl: "/images/webs/web-gtt-small.jpg",
+            targetUrl: "http://pandoracodebox.com/portfolio/webs/GlamTripTravel/",
+            title: "GLAM TRIP TRAVEL",
+            description: "Maquetado y desarrollo FrontEnd para web de Planificación de viajes",
+            techs: ["React JS","HTML5","CSS3"],
+        },{
             thumbUrl: "/images/webs/web-lacasa-small.jpg",
             targetUrl: "http://pandoracodebox.com/portfolio/webs/lacasa/login.php",
             title: "LA CASA",

@@ -13,7 +13,7 @@ const ContactUs = () => {
     const alertCloseCallback = () => setAlertShow(false);
     const emailSenderToken = "yhyhtgkgjrkjgrkj48565hjhng9dgu9rgr9jg";
     const emailTo = "contacto@pandoracodebox.com";
-    const emailSenderUrl = "http://pandoracodebox.com/MailSender/api/Mail";
+    const emailSenderUrl = "https://pandoracodebox.com/MailSender/api/Mail";
 
     const showAlert = (isError, errorMessage) => {
         if(isError === true){
